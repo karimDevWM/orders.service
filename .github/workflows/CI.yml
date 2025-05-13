@@ -30,7 +30,7 @@ jobs:
             echo 'PR_NUMBER=0' >> $GITHUB_ENV
           fi
 
-      - name: Generate Image Tag
+      - name: Generate docker Image Tag
         run: echo "IMAGE_TAG=${BUILD_DATE}-${PR_NUMBER}" >> $GITHUB_ENV
 
       - name: Login to GitHub Container Registry
